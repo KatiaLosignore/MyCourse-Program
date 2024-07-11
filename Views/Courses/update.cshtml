@@ -1,0 +1,23 @@
+@model CourseUpdateInputModel;
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Courses" asp-action="Update" asp-route-id="@Model.Id" method="post">
+    <div class="row">
+        <div class="col-md-8 mb-3">
+            <input type="text" asp-for="Title" class="form-control form-control-lg"
+                placeholder="Inserisci il nuovo Titolo del Corso">
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fas fa-rocket"></i> Modifica il 
+                Corso!</button>
+        </div>
+    </div>
+</form>
+
+<p class="back-button mt-5">
+    <a class="btn btn-primary" href="@Url.Action("Index", "Courses")" role="button">
+        <b>Torna Indietro</b>
+    </a>
+</p>
+
